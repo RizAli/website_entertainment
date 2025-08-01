@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Retro Arcade Games</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="menu">
+        <li><a href="#intro">Home</a></li>
+        <li>
+          <a href="#gallery">Games</a>
+          <ul class="dropdown">
+            <li><a href="#accordion">Pac-Man</a></li>
+            <li><a href="#acordion">Street Fighter II</a></li>
+          </ul>
+        </li>
+        <li><a href="#request">Request a Game</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="intro">
+      <h1>Welcome to Retro Arcade</h1>
+      <p>
+        Step back into the golden age of gaming — when coins ruled the arcades, and high scores were everything! Retro Arcade celebrates the most iconic games from the '80s and '90s that shaped the future of gaming as we know it.
+      </p>
+      <p>
+        Whether you're discovering classics for the first time or reliving old memories, explore legendary titles like <strong>Pac-Man</strong>, <strong>Street Fighter II</strong>, and <strong>Space Invaders</strong>. These games may look simple, but they were groundbreaking in design, gameplay, and cultural impact.
+      </p>
+      <blockquote style="margin-top: 1rem; font-style: italic; color: #aaa;">
+        "The simplest games bring the deepest fun — one coin at a time." – Arcade Fan
+      </blockquote>
+      <br />
+      <p>
+        Hit play on the video below to see what made these games unforgettable — and get ready to explore a world where pixels ruled and reflexes were everything!
+      </p>
+      <br />
+      <video controls>
+        <source src="videos/arcade.mp4" type="video/mp4">
+      </video>
+    </section>
+
+    <section id="accordion">
+      <h2>Top 5 Arcade Games of the 80s</h2>
+      <button class="accordion">Pac-Man</button>
+      <div class="panel">
+        <p>Pac-Man is a maze arcade game released in 1980 by Namco.</p>
+      </div>
+      <button class="accordion">Street Fighter II</button>
+      <div class="panel">
+        <p>Street Fighter II is a competitive fighting game released in 1991.</p>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h2>Game Gallery</h2>
+      <div class="grid">
+        <img src="images/pacman.jpg" alt="Pac-Man" class="modal-trigger" />
+        <img src="images/sf2.jpg" alt="Street Fighter II" class="modal-trigger" />
+      </div>
+      <br />
+      <input type="text" id="searchBar" placeholder="Search games..." />
+    </section>
+
+    <section id="request">
+      <h2>Request a Game</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+
+        <label for="genre">Genre:</label>
+        <select id="genre">
+          <option value="platformer">Platformer</option>
+          <option value="fighter">Fighter</option>
+          <option value="shooter">Shooter</option>
+        </select>
+
+        <label for="suggestion">Game Suggestion:</label>
+        <textarea id="suggestion"></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Retro Arcade</p>
+    <a href="https://archive.org/details/internetarcade" target="_blank">Play Retro Games</a>
+  </footer>
+
+  <div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg" alt="Enlarged game screenshot" />
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
