@@ -16,7 +16,7 @@ accordions.forEach((accordion) => {
 
 // Modal functionality
 const modal = document.getElementById("modal");
-const modalImg = document.getElementById("modal-img");
+const modalImg = document.getElementById("modalImg");
 const closeModal = document.getElementsByClassName("close")[0];
 const galleryImages = document.querySelectorAll(".grid img");
 
