@@ -74,3 +74,23 @@ searchBar?.addEventListener("input", () => {
   // Toggle the no-results message
   noResults.style.display = matchCount === 0 ? "block" : "none";
 });
+
+// Form submission handler
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("gameRequestForm");
+
+  form?.addEventListener("submit", (e) => {
+    e.preventDefault(); // Prevent page reload
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const genre = document.getElementById("genre").value;
+    const suggestion = document.getElementById("suggestion").value;
+
+    // Display confirmation (you can customize this or send to backend)
+    alert(`Thanks, ${name}! Your suggestion for a "${genre}" game has been received.`);
+
+    // Optional: Clear the form
+    form.reset();
+  });
+});
